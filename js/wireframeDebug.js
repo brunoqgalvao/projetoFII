@@ -20,6 +20,6 @@ function wireframeIt(color){
     $(div).css('style','box-sizing: border-box');
     });
 }
-    window.onload = function(e) {
-        wireframeIt();
-}
+//     window.onload = function(e) {
+//         wireframeIt();
+// }

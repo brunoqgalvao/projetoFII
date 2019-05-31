@@ -9,4 +9,5 @@
       "baseUri": "/",                             //  ii. workspace
       "proxyUri": "http://localhost:80/projetofii/" // iii. actual address
   },
+  "liveServer.settings.port": 5501,
 }

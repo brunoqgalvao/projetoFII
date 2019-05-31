@@ -2,11 +2,12 @@
 <html lang="en">
   <?php include "components/head.php" ?>
   <body>
-  <?php include "components/header.php" ?>
-  <?php include "components/loginform.php" ?>
-  <?php include "components/footer.php" ?>
+    <?php include "components/header.php" ?>
+    <?php include "components/loginform.php" ?>
+    <?php include "components/footer.php" ?>
   </body>
+  <!-- DEV: Só desenvolvimento -->
   <script>
-  <?php include "js/wireframeDebug.js" ?>
+    <?php include "js/wireframeDebug.js" ?>
   </script>
 </html>
