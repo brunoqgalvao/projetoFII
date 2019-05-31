@@ -6,4 +6,7 @@
   <?php include "home.php" ?>
   <?php include "footer.php" ?>
   </body>
+  <script>
+  <?php include "js/wireframeDebug.js" ?>
+  </script>
 </html>
