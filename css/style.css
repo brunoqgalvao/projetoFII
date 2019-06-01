@@ -4,7 +4,6 @@
   --main-bg-color: #fcfcfc;
   --main-color: rgb(21,136,145);
   --header-height: 10vh;
-
   --std-border-radius: 5px;
 
 }
@@ -54,6 +53,7 @@ header  > .header-brand > .header-brand-title {
 }
 header > .header-search-box {
   width: 40%;
+  display:none;
 }
 header > .header-search-box > input{
   width:100%;
@@ -73,4 +73,106 @@ header > .header-login-btns > .btn.btn-login {
 header > .header-login-btns > .btn.btn-cadastro {
   background-color: var(--main-color);
   color:white;
+}
+
+@media(min-width:576px){
+  header > .header-search-box {
+    display:block;
+  }
+}
+
+/* FOOTER CSS */
+footer {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+
+  margin-top:5%;
+  width:100%;
+  padding: 0.5em 0.5em 0.5em 0.8em;
+
+  background-color: var(--main-color);
+  color:white;
+  font-size:12px;
+}
+footer > .footer-copyright {
+  font-size:10px;
+}
+footer > .social-media {
+  padding:0.5rem;
+}
+.fa {
+  padding:10px;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+/* LOGIN FORM CSS */
+.login-container {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.login-container > .row > .login-form {
+  padding: 5%;
+  /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19); */
+
+}
+.login-container > .row > .login-form  .login-form-title {
+  font-size:1.2rem;
+  font-weight:bold;
+  text-align: center;
+  color: #333;
+}
+.login-container > .row > .login-form > form {
+  padding: 0% 10% 0% 10% ;
+}
+.login-container > .row > .login-form .btnSubmit {
+  width: 50%;
+  border-radius: 1rem;
+  padding: 1.5%;
+  border: none;
+  cursor: pointer;
+}
+.login-container > .row > .login-form .btnSubmit {
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--main-color);
+}
+.login-container > .row > .login-form .ForgetPwd {
+  color: var(--main-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+.login-container .btn-login-facebook {
+  display:flex;
+  justify-content:center;
+  margin-bottom:5%;
+  margin-top:5%;
+}
+.btn-facebook {
+  font-size:1rem;
+  color: #ffffff;
+  background-color: #3b5998;
+  border-color: rgba(0,0,0,0.2);
 }
