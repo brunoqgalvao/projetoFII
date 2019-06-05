@@ -4,19 +4,25 @@
   --main-bg-color: #fcfcfc;
   --main-color: rgb(21,136,145);
   --header-height: 10vh;
+  --body-height: 70vh;
   --std-border-radius: 5px;
 
 }
 
 /* HTML GLOBAL */
 * , body {
-  margin:0;
+  margin:0 auto;
   padding:0;
   box-sizing:border-box;
   font-family: Arial, Helvetica, sans-serif
 }
 input {
   border:none;
+}
+
+.btn-padrao {
+  background-color: var(--main-color);
+  color:white;
 }
 
 /* CSS DO HEADER */
@@ -131,7 +137,7 @@ color: white;
 /* LOGIN FORM CSS */
 .login-container {
   margin-top: 5%;
-  margin-bottom: 5%;
+  min-height: var(--body-height);
 }
 .login-container > .row > .login-form {
   padding: 5%;
@@ -147,19 +153,19 @@ color: white;
 .login-container > .row > .login-form > form {
   padding: 0% 10% 0% 10% ;
 }
-.login-container > .row > .login-form .btnSubmit {
+.login-container > .row > .login-form .btn-submit {
   width: 50%;
   border-radius: 1rem;
   padding: 1.5%;
   border: none;
   cursor: pointer;
 }
-.login-container > .row > .login-form .btnSubmit {
+.login-container > .row > .login-form .btn-submit {
   font-weight: 600;
   color: #fff;
   background-color: var(--main-color);
 }
-.login-container > .row > .login-form .ForgetPwd {
+.login-container > .row > .login-form #login-forget-pwd {
   color: var(--main-color);
   font-weight: 600;
   text-decoration: none;

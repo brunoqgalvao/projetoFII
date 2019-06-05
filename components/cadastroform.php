@@ -9,7 +9,7 @@
       <div class='login-form-title'>BEM VINDO AO PROJETO FII</div>
       <div class='btn-login-facebook'>
         <a class="btn btn-lg btn-facebook" href="#">
-          Entre com facebook
+          Cadastro com facebook
         </a>
       </div>
       <hr/>
@@ -17,15 +17,12 @@
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Seu e-mail *" value="" required/>
         </div>
-        <div class="form-group">
+        <!-- <div class="form-group">
           <input type="password" class="form-control" placeholder="Sua senha *" value="" required
           />
-        </div>
+        </div> -->
         <div class="form-group">
-          <input type="submit" class="btn-submit" value="Login" />
-        </div>
-        <div class="form-group">
-          <a href="#" id='login-forget-pwd'>Esqueceu a senha?</a>
+          <input type="submit" class="btn-submit" value="Cadastrar" />
         </div>
       </form>
     </div>
