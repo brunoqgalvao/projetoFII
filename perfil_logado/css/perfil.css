@@ -1,0 +1,429 @@
+
+/* ------------------------------------------ RESET */
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+:root{
+    --verde: #158891;
+    --verde-hover: #335a5c;
+    --border-radius-input: 12px;
+    --hero-min-height: 180px;
+    --button-min-width: 40px;
+    --cor-hero-infos-usuario: #081b08;
+    --box-shadow-header: 0 2px 3px 1px rgba(0,20,0,0.4);
+    --box-shadow-form: 0 2px 4px 1px rgba(0,50,0,0.3);
+    --box-shadow-hero-section: 0 2px 3px 1px rgba(0,20,0,0.4);
+    --box-shadow-avatar: 0 0 5px 2px rgba(0,50,0,0.3);
+    --box-shadow-hero-infos: 0 0 2px 1px rgba(0,50,0,0.4);
+    --box-shadow-post-wrapper-box: 0 1px 2px 1px rgba(0,20,0,0.1);
+    --background-hero-infos: rgba(255, 255, 255, 0.4);
+    --size-avatar-header: 62px;
+    --size-avatar-hero: calc(var(--hero-min-height) / 5 * 4);
+    --size-avatar-post: var(--size-avatar-header);
+    --background-color-main: #FCFCFC;
+    --background-color-post-box: #F3F3F3;
+    --width-input-number-seguidores: 1.5rem;
+    --width-input-number-like-comment-share: 2rem;
+    --font-size-nome-sobrenome-post:1.5rem;
+    --font-size-post-escrito: 1.05rem;
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after{
+    cursor: text;
+}
+
+/* ------------------------------------PARÂMETROS GERAIS */
+
+
+html, body{
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Titillium Web', sans-serif;
+}
+a[href]{ /* */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+label {
+    cursor: text;
+}
+input[type="number"]{
+    -moz-appearance: textfield; /* tira a seta que o firefox coloca em inputs number */
+    appearance: textfield;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: text;
+    display: inline-block;
+}
+label.input_number_label + div.input_number_wrapper::before{
+    content:'(';
+}
+label.input_number_label + div.input_number_wrapper::after{
+    content:')';
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+     /* tira a seta que o Chrome e o Safari colocam em inputs number */
+    -webkit-appearance: none;
+}
+
+div.input_number_wrapper {
+    display: inline-block;
+    text-indent: 5px;
+}
+div.all_avatar_container{
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-avatar);
+}
+img.all_avatar_img,
+.post_media{ /* posts de gráficos, imagens e vídeos */
+    width: 100%;
+    height: auto;
+    /* aprendi essa técnica com imagens funçando o materialize css */
+}
+
+/* ------------------------------------HEADER */
+
+header#cabecalho {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--verde);
+    margin-bottom: 5px;
+    box-shadow: var(--box-shadow-header);
+}
+
+/* ---------------------------------HEADER 1/3 - logo */
+
+header#cabecalho > div#logo_container{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 8px 0 6px 8px;
+    position: relative;
+    margin: 10px 2px 0 15px;
+}
+header#cabecalho > div#logo_container > div#logo_bg{
+    display: block;
+    height: 1.5cm;
+    background: url(../img/logo.png) no-repeat left;
+    background-size: contain;
+}
+header#cabecalho > div#logo_container > span#nome_logo {
+    display: inline-block;
+    width: 120px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 0.9px;
+    color: #ffffff;
+}
+
+/* ---------------------------------HEADER 2/3 - form */
+header#cabecalho > form#form{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 15px;
+    width: 30vw;
+    min-width: 245px;
+    background: #ffffff;
+    border-radius: var(--border-radius-input);
+    overflow: hidden;
+    border: solid 2px #ffffff;
+    box-shadow: var(--box-shadow-form);
+}
+header#cabecalho > form#form > input#form-input-search {
+    display: inline-block;
+    width: calc(100% - var(--button-min-width) - 5px);
+        /* input:search + button(40px) = form(100%) - 5px */
+    padding: 8px 0;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-indent: 10px;   
+}
+input#form-input-search::placeholder {
+    opacity: 0.7;
+    transition: 200ms ease;
+}
+input#form-input-search:focus::placeholder {
+    color: var(--verde);
+    opacity: 0.85;
+    font-weight: bold;
+}
+header#cabecalho > form#form > button#form_button {
+    background: var(--verde);
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius-input);
+    min-width: var(--button-min-width);
+    height: 35px;
+    right: 30px;
+    font-size: 1.05rem;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    transition: 300ms ease;
+}
+header#cabecalho > form#form > button#form_button:hover{
+    background: var(--verde-hover);
+}
+header#cabecalho > form#form > button#form_button:active{
+    color: var(--verde);
+}
+
+/* ---------------------------------HEADER 3/3 - avatar */
+
+header#cabecalho > div#avatar_header_container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-right: 30px;
+    width: 150px;
+}
+header#cabecalho > div#avatar_header_container > div#avatar_header {
+    height: var(--size-avatar-header);
+    width: var(--size-avatar-header);
+}
+
+header#cabecalho > div#avatar_header_container > span#nome_usuario_header{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    color: #ffffff;
+}
+
+/* ------------------------------------------ HERO SECTION */
+
+body > section#hero{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: var(--hero-min-height);
+    padding: 10px 0;
+    background: url(../img/hero.jpg) no-repeat left;
+    background-size: cover;
+    box-shadow: var(--box-shadow-hero-section);
+}
+section#hero > div {
+    margin-left: 50px;
+    
+}
+/* body > section#hero::before{ Pode ser nessessário caso mudemos a hero img
+    content: '';
+    display: inline-block;
+    width: 17vw;
+    height: 20px;
+} */
+body > section#hero > div:nth-of-type(-n + 2){
+    
+    /* 1 - #avatar_hero_container e 2 - #info_usuario_container */
+    
+    height: var(--size-avatar-hero);
+    display: grid; /* centraliza com menos código do que flex */
+}
+body > section#hero > div#avatar_hero_container {
+    width: var(--size-avatar-hero); /* largura igual à altura para deixar quadrado */
+}
+
+body > section#hero > div#info_usuario_container{
+    place-content: center; /* shorthand para align e justify */
+    background: var(--background-hero-infos);
+    box-shadow: var(--box-shadow-hero-infos);
+    /*  opacity: 0.2; */
+}
+
+body > section#hero > div#info_usuario_container > div:nth-of-type(-n + 4){
+    
+    /* nome, profissão, local e seguidores */
+    
+    height: calc(var(--hero-min-height) / 5);
+    line-height: calc(var(--hero-min-height) / 5);
+    width: 320px;
+    min-width: 230px;
+    color: var(--cor-hero-infos-usuario);
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+    text-indent: 20px;
+    font-size: 1.05rem;
+}
+body > section#hero > div#info_usuario_container div:nth-of-type(-n + 3){
+    
+    /* nome, profissão e local */
+    
+    display: inline-block;
+}
+body > section#hero > div#info_usuario_container div:nth-of-type(4) {
+
+     /* seguidores */
+
+    display: flex;
+}
+body > section#hero > div#info_usuario_container > div#hero_nome span:nth-child(-n + 2){
+    
+    /* nome e sobrenome */
+    
+    font-size: 1.5rem;
+}
+body > section#hero > div#info_usuario_container > div#hero_profissao span:nth-child(1)::after{
+    
+    /* coloca o "em" entre a profissão e o local de trabalho */
+    
+    content: ' em ';
+    text-transform: lowercase;
+}
+body > section#hero > div#info_usuario_container > div#hero_local span:nth-child(-n + 2)::after{
+    
+    /* coloca a vírgula após país e após estado: país, estado, cidade */
+    
+    content: ',';
+}
+
+body > section#hero > div#info_usuario_container > div#hero_seguidores > div.input_number_wrapper > input#num_seguidores {
+    
+    /* font-size do número de seguidores */
+
+    width: var(--width-input-number-seguidores);
+    font-size: 1.02rem;
+ 
+}
+
+/* ------------------------------------------ MAIN (posts) */
+
+body > main#timeline {
+    width: 100vw;
+    background: var(--background-color-main);
+}
+main#timeline > div.post_box_wrapper {
+    width: 65vw;
+    min-width: 320px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-post-wrapper-box);
+    background: var(--background-color-post-box);
+}
+
+
+/* 1/4 - header */
+
+main#timeline > div.post_box_wrapper > header.header_post {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+main#timeline > div.post_box_wrapper > header.header_post > div.avatar_post_container{
+    width: var(--size-avatar-post);
+    height: var(--size-avatar-post);
+}
+
+div.container_post_nome_sobrenome_data_horario > div.nome_sobrenome_post_container span:nth-of-type(n) {
+    
+    /* estilizando nome e sobrenome do usuário dentro do post */
+
+    text-transform: capitalize;
+    color: var(--verde);
+    font-weight: 900;
+    font-size: var(--font-size-nome-sobrenome-post);
+    letter-spacing: 0.2px;
+}
+
+div.post_box_wrapper > header.header_post > div.container_post_nome_sobrenome_data_horario {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+/* div.container_post_nome_sobrenome_data_horario > div.data_horario input:nth-of-type(1){
+    content: '-';
+    display: inline-block;
+    background: red;
+   
+} */
+input.data_hora{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    display: inline-block;   
+}
+
+input.data_post{
+    width: 6rem;
+}
+input.hora_post{
+    width: 3.5rem;
+}
+/* 2/4 - parágrafo */
+
+main#timeline > div.post_box_wrapper > p.post_escrito {
+    line-height: 130%;
+    font-size: var(--font-size-post-escrito);
+    letter-spacing: 0.1px;
+    text-align: justify;
+    width: 95%; /* achei curioso ter funcionado sem setar display como inline-block
+                    pesquisar se P por defaut é display: block */
+    margin: 20px 0;
+}
+/* 3/4 - post media - gráficos, vídeos e imagens */
+main#timeline > div.post_box_wrapper > div.post_media_container {
+    width: 95%; /* elemento pai (div.post_box_wrapper) vai de 65vw a 320px */
+    margin-bottom: 25px;
+  
+}
+
+/* 4/4 - curtir, comentar e compartilhar */
+
+main#timeline > div.post_box_wrapper > footer.post {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    flex-flow: row nowrap;
+    transform: translateX(-11px);
+    margin-bottom: 15px;
+    color: var(--verde);
+}
+
+i.fa-comment-alt,
+i.fa-share-square{
+    color: #000000;
+}
+/* main#timeline > div.post_box_wrapper > footer.post > div label + div.input_number_wrapper {
+
+    display: inline-block;
+} */
+main#timeline > div.post_box_wrapper > footer.post > div div.input_number_wrapper > input[type="number"]{
+    width: var(--width-input-number-like-comment-share);
+    font-size: 1.02rem;
+}
