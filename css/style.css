@@ -1,89 +1,190 @@
 
-/* Variaveis Globais */
-* {
-  --main-bg-color: #fcfcfc;
-  --main-color: rgb(21,136,145);
-  --header-height: 10vh;
-  --body-height: 70vh;
-  --std-border-radius: 5px;
+/* ------------------------------------------ RESET */
 
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+:root{
+    --verde: #158891;
+    --verde-hover: #335a5c;
+    --border-radius-input: 12px;
+    --hero-min-height: 180px;
+    --button-min-width: 40px;
+    --cor-hero-infos-usuario: #081b08;
+    --box-shadow-header: 0 2px 3px 1px rgba(0,20,0,0.4);
+    --box-shadow-form: 0 2px 4px 1px rgba(0,50,0,0.3);
+    --box-shadow-hero-section: 0 2px 3px 1px rgba(0,20,0,0.4);
+    --box-shadow-avatar: 0 0 5px 2px rgba(0,50,0,0.3);
+    --box-shadow-hero-infos: 0 0 2px 1px rgba(0,50,0,0.4);
+    --box-shadow-post-wrapper-box: 0 1px 2px 1px rgba(0,20,0,0.1);
+    --background-hero-infos: rgba(255, 255, 255, 0.4);
+    --size-avatar-header: 62px;
+    --size-avatar-hero: calc(var(--hero-min-height) / 5 * 4);
+    --size-avatar-post: var(--size-avatar-header);
+    --background-color-main: #FCFCFC;
+    --background-color-post-box: #F3F3F3;
+    --width-input-number-seguidores: 1.5rem;
+    --width-input-number-like-comment-share: 2rem;
+    --font-size-nome-sobrenome-post:1.5rem;
+    --font-size-post-escrito: 1.05rem;
+}
+*,
+*::before,
+*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* HTML GLOBAL */
-* , body {
-  margin:0 auto;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif
+*::before,
+*::after{
+    cursor: text;
 }
-input {
-  border:none;
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
+a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* PADRAO GLOBAL */
+
+body{
+  overflow-x: hidden;
+  font-family: 'Titillium Web', sans-serif;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:space-between;
+  width: 100vw;
+  min-height:calc(100vh);
+}
+
 
 .btn-padrao {
-  background-color: var(--main-color);
+  background-color: #158891;
   color:white;
+  border-radius: var(--border-radius-input);
 }
 
 /* CSS DO HEADER */
 
 
 header {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  height: var(--header-height);
-  width:100%;
-  padding: 1em 1em 0.8em 0.8em;
-
-  background-color: var(--main-color);
-  color:white;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--verde);
+  margin-bottom: 5px;
+  box-shadow: var(--box-shadow-header);
 }
-header > .header-brand {
-  display:flex;
-  align-items:flex-end;
-  height:100%;
+
+header > .logo-container {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 8px 0 6px 8px;
+  position: relative;
+  margin: 10px 2px 0 15px;
 }
-header  > .header-brand > .header-brand-logo {
+header > .logo-container > a.logo-container-link { /* */
+  position: absolute;
+  width: 100%;
   height: 100%;
+  cursor: pointer;
 }
-header  > .header-brand > .header-brand-logo > #header-brand-logo-img {
-  height:100%;
-  width:auto;
+header  > .logo-container > .logo-container-logo-bg {
+  display: block;
+  height: 1.5cm;
+  background: url(../assets/logo.png) no-repeat left;
+  background-size: contain;
 }
-header  > .header-brand > .header-brand-title {
-  align-self:flex-end;
-  font-weight:bold;
-  font-size:1.2rem;
+
+header  > .logo-container > .logo-container-title {
+  width: 120px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.9px;
+  color: #ffffff;
 }
-header > .header-search-box {
-  width: 40%;
-  display:none;
+header > .search-box {
+  top: 15px;
+  width: 30vw;
 }
-header > .header-search-box > input{
-  width:100%;
-  padding:0.2em;
-  border-radius: var(--std-border-radius);
+.search-box{
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  min-width: 245px;
+  background: #ffffff;
+  border-radius: var(--border-radius-input);
+  overflow: hidden;
+  border: solid 2px #ffffff;
+  box-shadow: var(--box-shadow-form);
+}
+
+.search-box > .input-search {
+  width: calc(100% - var(--button-min-width) - 5px);
+      /* input:search + button(40px) = form(100%) - 5px */
+  padding: 8px 0;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-indent: 10px;   
+}
+.input-search::placeholder {
+  opacity: 0.7;
+  transition: 200ms ease;
+}
+.input-search:focus::placeholder {
+  color: var(--verde);
+  opacity: 0.85;
+  font-weight: bold;
+}
+.search-box > button.search-btn {
+  background: var(--verde);
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius-input);
+  min-width: var(--button-min-width);
+  height: 35px;
+  right: 30px;
+  font-size: 1.05rem;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  transition: 300ms ease;
+}
+.search-box > button.search-btn:hover{
+  background: var(--verde-hover);
+}
+.search-box > button.search-btn:active{
+  color: var(--verde);
 }
 header > .header-login-btns {
-
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 30px;
+  width:150px;
 }
 header > .header-login-btns > .btn {
   font-weight:bold;
+  width:150px;
 }
 header > .header-login-btns > .btn.btn-login {
-  background-color: var(--main-bg-color);
-  color:var(--main-color);
-}
-header > .header-login-btns > .btn.btn-cadastro {
-  background-color: var(--main-color);
-  color:white;
+  background-color: var(--background-color-main);
+  color:var(--verde);
 }
 
 @media(min-width:576px){
-  header > .header-search-box {
-    display:block;
+  header > header > .search-box {
+    display:flex;
   }
 }
 
@@ -98,7 +199,7 @@ footer {
   width:100%;
   padding: 0.5em 0.5em 0.5em 0.8em;
 
-  background-color: var(--main-color);
+  background-color: var(--verde);
   color:white;
   font-size:12px;
 }
@@ -136,7 +237,6 @@ color: white;
 
 /* LOGIN FORM CSS */
 .login-container {
-  margin-top: 5%;
   min-height: var(--body-height);
 }
 .login-container > .row > .login-form {
@@ -163,10 +263,10 @@ color: white;
 .login-container > .row > .login-form .btn-submit {
   font-weight: 600;
   color: #fff;
-  background-color: var(--main-color);
+  background-color: var(--verde);
 }
 .login-container > .row > .login-form #login-forget-pwd {
-  color: var(--main-color);
+  color: var(--verde);
   font-weight: 600;
   text-decoration: none;
 }

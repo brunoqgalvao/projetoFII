@@ -121,7 +121,7 @@ header#cabecalho > div#logo_container{
 header#cabecalho > div#logo_container > div#logo_bg{
     display: block;
     height: 1.5cm;
-    background: url(../img/logo.png) no-repeat left;
+    background: url(../assets/logo.png) no-repeat left;
     background-size: contain;
 }
 header#cabecalho > div#logo_container > span#nome_logo {
@@ -226,7 +226,7 @@ body > section#hero{
     width: 100%;
     min-height: var(--hero-min-height);
     padding: 10px 0;
-    background: url(../img/hero.jpg) no-repeat left;
+    background: url(../assets/hero.jpg) no-repeat left;
     background-size: cover;
     box-shadow: var(--box-shadow-hero-section);
 }

@@ -3,7 +3,9 @@
   <?php include "components/head.php" ?>
   <body>
     <?php include "components/header.php" ?>
-    <?php include "components/loginform.php" ?>
+    <main class='main-container'>
+      <?php include "components/loginform.php" ?>
+    </main>
     <?php include "components/footer.php" ?>
   </body>
   <!-- DEV: Só desenvolvimento -->

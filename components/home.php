@@ -27,26 +27,12 @@
     width: 40%;
     padding:0.2em;
   }
-  .banner-search-box > input{
+  .banner-btn-analise > .btn {
     width:100%;
     padding:0.2em;
-    border-radius: var(--std-border-radius);
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
-
-  }
-  .banner-btn-analise > button {
-    width:100%;
-    padding:0.2em;
-    border-radius: var(--std-border-radius);
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
   }
 
-  .btn-padrao {
-    background-color: var(--main-color);
-    color:white;
-    border:none;
-  }
-  
   @media(max-width:576px){
     .banner-search-box, .banner-btn-analise {
     margin:0 auto;
@@ -85,10 +71,13 @@
 <main>
   <div class='banner'>
     <div class= 'banner-search-box'> 
-      <input type='text' id='bannerSearchBox' name='bannerSearchBox' placeholder='Busque aqui o seu investimento'/>
-    </div>
+      <form action="" class='search-box'>
+        <input type="search" name="" class="input-search" placeholder="faça uma busca por fundo de investimento">
+      <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+    </form>    
+  </div>
     <div class= 'banner-btn-analise'> 
-      <button class='btn-analise btn-padrao'>Comparar fundos</button>
+      <button class='btn btn-padrao'>Comparar fundos</button>
     </div>
   </div>
   <div class='carrousel'>
@@ -103,7 +92,6 @@
 
 <script>
 
-document.querySelectAll(.)
 
 
 </script>
