@@ -1,10 +1,6 @@
 <!-- This is the contato form -->
 <!-- TODO:
-  - CSS
-  - nome
-  - email
-  - comentário
-  - submit button
+  - fazer form passando por varios steps via javascript
 -->
 <!-- FIXME: Arrumar classes para CSS-->
 <div class="container login-container">

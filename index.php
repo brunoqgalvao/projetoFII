@@ -10,7 +10,7 @@
   <script>
     <?php include "js/wireframeDebug.js" ?>
     window.onload = function(e) {
-      //wireframeIt();
+      wireframeIt();
     }
   </script>
 </html>
