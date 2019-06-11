@@ -18,12 +18,19 @@
     <a href="#" id="perfil-link"></a>
 
     <div class="all_avatar_container" id="avatar_header">
-      <img src="img/avatar.jpg" alt="avatar" class="all_avatar_img">
+      <img src="assets/avatar.jpg" alt="avatar" class="all_avatar_img">
     </div>
 
     <span id="nome_usuario_header">larissa</span>
   </div>
-  <!-- <nav id="nav-menu">
-
-</nav> -->
+  <nav id="nav-menu_perfil">
+    <ul id="nav-lista_menu_perfil">
+      <li class="item-lista_menu_perfil">
+        <a href="http://" target="_blank" rel="noopener noreferrer">meu perfil</a>
+      </li>
+      <li class="item-lista_menu_perfil"><a href="http://" target="_blank" rel="noopener noreferrer">dashboard</a></li>
+      <li class="item-lista_menu_perfil"><a href="http://" target="_blank" rel="noopener noreferrer">suporte</a></li>
+      <li class="item-lista_menu_perfil"><a href="http://" target="_blank" rel="noopener noreferrer">log out</a></li>
+    </ul>
+  </nav>
 </header>

@@ -49,6 +49,7 @@ html, body{
     overflow-x: hidden;
     font-family: 'Titillium Web', sans-serif;
 }
+
 a[href]{ /* */
     position: absolute;
     width: 100%;
@@ -94,7 +95,7 @@ img.all_avatar_img,
 .post_media{ /* posts de gráficos, imagens e vídeos */
     width: 100%;
     height: auto;
-    /* aprendi essa técnica com imagens funçando o materialize css */
+    /* aprendi essa técnica com imagens fuçando o materialize css */
 }
 
 /* ------------------------------------HEADER */
@@ -109,7 +110,7 @@ header#cabecalho {
     box-shadow: var(--box-shadow-header);
 }
 
-/* ---------------------------------HEADER 1/3 - logo */
+/* ---------------------------------HEADER 1/4 - logo */
 
 header#cabecalho > div#logo_container{
     display: flex;
@@ -133,7 +134,7 @@ header#cabecalho > div#logo_container > span#nome_logo {
     color: #ffffff;
 }
 
-/* ---------------------------------HEADER 2/3 - form */
+/* ---------------------------------HEADER 2/4 - form */
 header#cabecalho > form#form{
     display: flex;
     flex-flow: row wrap;
@@ -190,7 +191,7 @@ header#cabecalho > form#form > button#form_button:active{
     color: var(--verde);
 }
 
-/* ---------------------------------HEADER 3/3 - avatar */
+/* ---------------------------------HEADER 3/4 - avatar */
 
 header#cabecalho > div#avatar_header_container{
     display: flex;
@@ -200,6 +201,7 @@ header#cabecalho > div#avatar_header_container{
     position: relative;
     margin-right: 30px;
     width: 150px;
+    border: black 1px solid;
 }
 header#cabecalho > div#avatar_header_container > div#avatar_header {
     height: var(--size-avatar-header);
@@ -215,6 +217,37 @@ header#cabecalho > div#avatar_header_container > span#nome_usuario_header{
     color: #ffffff;
 }
 
+/* ---------------------------------HEADER 4/4 - nav menu */
+nav#nav-menu_perfil {
+    display: block; /* default normalmente */
+    position:absolute;
+    right: 0;
+    top: 107.5px;
+    width: 180px; /* 150px do width e 30px da margin-right da div#avatar_header_container 
+    não criei variáveis, pois tem dois CSSs com variáveis */
+}
+nav#nav-menu_perfil > ul#nav-lista_menu_perfil{
+    display: block; /* default normalmente */
+    position: relative;
+    background: red;
+}
+nav#nav-menu_perfil > ul#nav-lista_menu_perfil > li.item-lista_menu_perfil {
+    display: block; /* default normalmente */
+    position: relative;
+    border: blue solid 1px;
+    
+}
+nav#nav-menu_perfil > ul#nav-lista_menu_perfil > li.item-lista_menu_perfil > a {
+    display: inline;  /* default normalmente. */
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    position: relative;
+    border: 5px solid green;
+    background: purple;
+    width: 150px;
+    color: #ffffff;
+
+}
 /* ------------------------------------------ HERO SECTION */
 
 body > section#hero{
