@@ -201,7 +201,6 @@ header#cabecalho > div#avatar_header_container{
     position: relative;
     margin-right: 30px;
     width: 150px;
-    border: black 1px solid;
 }
 header#cabecalho > div#avatar_header_container > div#avatar_header {
     height: var(--size-avatar-header);
@@ -218,34 +217,47 @@ header#cabecalho > div#avatar_header_container > span#nome_usuario_header{
 }
 
 /* ---------------------------------HEADER 4/4 - nav menu */
-nav#nav-menu_perfil {
-    display: block; /* default normalmente */
-    position:absolute;
+
+nav.nav-menu_perfil {
+    display: none; /* default normalmente, mas n */
+    position: absolute;
     right: 0;
-    top: 107.5px;
-    width: 180px; /* 150px do width e 30px da margin-right da div#avatar_header_container 
+    top: 113px;
+     /* 150px do width e 30px da margin-right da div#avatar_header_container 
     não criei variáveis, pois tem dois CSSs com variáveis */
+    background: var(--verde);
+    box-shadow: var(--box-shadow-hero-section);
+    height: 88vh;
 }
-nav#nav-menu_perfil > ul#nav-lista_menu_perfil{
+nav.nav-menu_perfil_open {
+    display: block;
+}
+
+
+nav.nav-menu_perfil > ul#nav-lista_menu_perfil{
     display: block; /* default normalmente */
     position: relative;
-    background: red;
-}
-nav#nav-menu_perfil > ul#nav-lista_menu_perfil > li.item-lista_menu_perfil {
-    display: block; /* default normalmente */
-    position: relative;
-    border: blue solid 1px;
+    top: 4%;
     
 }
-nav#nav-menu_perfil > ul#nav-lista_menu_perfil > li.item-lista_menu_perfil > a {
-    display: inline;  /* default normalmente. */
-    font-size: 1.3rem;
+nav.nav-menu_perfil > ul#nav-lista_menu_perfil > li.item-lista_menu_perfil {
+    /* display: list-item;  default */
+    text-align: center;
+    position: relative;
+    list-style: none;
+    width: 180px;
+    
+}
+nav.nav-menu_perfil > ul#nav-lista_menu_perfil > li.item-lista_menu_perfil > a {
+    display: inline-;
+    font-size: 1.15rem;
     text-transform: capitalize;
     position: relative;
-    border: 5px solid green;
-    background: purple;
     width: 150px;
     color: #ffffff;
+    text-decoration: none;
+    height: 100px;
+    
 
 }
 /* ------------------------------------------ HERO SECTION */
