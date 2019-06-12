@@ -1,17 +1,12 @@
 <!-- This is the contato form -->
 <!-- TODO:
-  - CSS
-  - nome
-  - email
-  - comentário
-  - submit button
+  - Linkar form
 -->
-<!-- FIXME: Arrumar classes para CSS-->
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-10 col-md-5">
-      <fieldset>
-        <div class="text-center mt-5">
+      <fieldset class=" mt-5">
+        <div class="text-center">
         <legend>CONTATE-NOS</legend>
         </div>
         <form>
@@ -27,7 +22,7 @@
           <div class="form-group">
             <div class="justify-content-between">
               <div class="form-inline">
-                <div class="form-check ml-0">
+                <div class="form-check ml-0 w-auto">
                   <input type="checkbox" class="form-check-input" id="postarNome">
                   <label class="form-check-label" for="postarNome">Não postar meu nome</label>
                 </div>
