@@ -1,6 +1,10 @@
 <!-- This is the contato form -->
 <!-- TODO:
+<<<<<<< HEAD
   - Linkar form
+=======
+  - fazer form passando por varios steps via javascript
+>>>>>>> 019add0ca151ffd07fac77de0dc639f6269aa850
 -->
 <div class="container">
   <div class="row justify-content-center">
