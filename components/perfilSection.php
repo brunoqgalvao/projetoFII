@@ -85,4 +85,55 @@
 
     </footer>
   </div>
+  <div class="post_box_wrapper">
+
+<!-- AVATAR, NOME, SOBRENOME, DATA E HORA -->
+<header class="header_post">
+  <div class="all_avatar_container avatar_post_container">
+    <img src="assets/avatar.jpg" alt="avatar" class="all_avatar_img">
+  </div>
+  <div class="container_post_nome_sobrenome_data_horario">
+    <div class="nome_sobrenome_post_container">
+      <span class="nome_usuario_post">larissa</span> <!-- Classes do nome e do sobrenome não foram usadas -->
+      <span class="sobrenome_usuario_post">ferreira</span> <!-- estilizados com :nth-of-type-->
+    </div>
+    <div class="data_horario">
+      <input type="datetime" value="yyyy-mm-dd" class="data_hora data_post">
+      <input type="local" value="hh:mm" class="data_hora hora_post">
+    </div>
+  </div>
+</header>
+<!-- POST ESCRITO -->
+<p class="post_escrito">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, provident!
+  Animi, hic id quaerat molestiae cupiditate eum, obcaecati, inventore ullam maiores aperiam officia fuga?
+  Reiciendis tenetur veniam repellendus quam est!</p>
+<!-- POST MEDIA (FOTOS, GRÁFICOS, VÍDEOS) -->
+<div class="post_media_container">
+  <img src="assets/post.png" alt="post" class="post_media">
+</div>
+
+<!-- CURTIDAS, COMENTÁRIOS E COMPARTILHAMENTOS -->
+<footer class="post">
+  <div class="curtir">
+    <i class="fas fa-star"></i>
+    <!-- INPUT NUMBER-->
+    <label for="num_curtidas" class="input_number_label label_curtidas">curtir</label>
+    <div class="input_number_wrapper"><input type="number" name="" class="num_curtidas"></div>
+  </div>
+  <div class="comentar">
+    <i class="far fa-comment-alt"></i>
+    <!-- INPUT NUMBER-->
+    <label for="num_comentarios" class="input_number_label label_comentar">comentar</label>
+    <div class="input_number_wrapper"><input type="number" name="" class="num_comentarios"></div>
+  </div>
+  <div class="compartilhar">
+    <i class="fas fa-share-square"></i>
+    <!-- INPUT NUMBER-->
+    <label for="num_shared" class="input_number_label label_comentar">compartilhar</label>
+    <div class="input_number_wrapper"><input type="number" name="" class="num_shared"></div>
+  </div>
+  <!-- FIM POST PADRÃO-->
+
+</footer>
+</div>
 </main>

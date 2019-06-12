@@ -69,7 +69,7 @@
 <main>
   <div class='banner'>
     <div class= 'banner-search-box'> 
-      <form action="" class='search-box'>
+      <form action="perfil.php" class='search-box'>
         <input type="search" name="" class="input-search" placeholder="faça uma busca por fundo de investimento">
       <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
     </form>    
@@ -78,11 +78,6 @@
       <button class='btn btn-padrao'>Comparar fundos</button>
     </div>
   </div>
-  <!-- <div class='carrousel'>
-    <div class='carrousel-item bg-light'>TESTE</div>
-    <div class='carrousel-item bg-light'>TESTE</div>
-    <div class='carrousel-item bg-light'>TESTE</div>
-  </div> -->
 </main>
 
 <script>

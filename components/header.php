@@ -3,7 +3,7 @@
 
 <header>
   <div class= 'logo-container'>
-    <a href="#" class="logo-container-link"></a>
+    <a href="./index.php" class="logo-container-link"></a>
     <div class="logo-container-logo-bg"></div>
     <span class="logo-container-title">projeto fii</span>
   </div>
