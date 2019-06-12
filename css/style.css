@@ -61,7 +61,6 @@ body{
   min-height:calc(100vh);
 }
 
-
 .btn-padrao {
   background-color: #158891;
   color:white;
@@ -195,7 +194,6 @@ footer {
   justify-content:space-around;
   align-items:center;
 
-  margin-top:5%;
   width:100%;
   padding: 0.5em 0.5em 0.5em 0.8em;
 
