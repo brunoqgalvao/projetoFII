@@ -4,6 +4,7 @@
   <body>
     <?php include "components/header.php" ?>
     <?php include "components/home.php" ?>
+    <?php include "components/textoSobre.php" ?>
     <?php include "components/footer.php" ?>
   </body>
   <!-- DEV: Só desenvolvimento -->

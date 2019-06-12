@@ -46,23 +46,21 @@
 <style>
 
 .carrousel {
-  display:block;
+  display:flex;
+  flex-flow: row nowrap;
   position:relative;
   width:100%;
   height:30vh;
+  padding:1rem;
 }
 .carrousel > * {
-  position:absolute;
-  z-index:1;
   width:300px;
   height:90%;
   margin:0 auto;
-  right:0;
-  left:0;
-  
   display:flex;
   justify-content:center;
   align-items:center;
+  border-radius:16px;
 
 }
 
@@ -80,14 +78,11 @@
       <button class='btn btn-padrao'>Comparar fundos</button>
     </div>
   </div>
-  <div class='carrousel'>
-    <div class='carrousel-item' id='item1' carrousel-target='1'>TESTE</div>
-    <div class='carrousel-item' id='item2' carrousel-target='2'>TESTE</div>
-    <div class='carrousel-item' id='item3' carrousel-target='3'>TESTE</div>
-    <div class='carrousel-item' id='item4' carrousel-target='4'>TESTE</div>
-    <div class='carrousel-item' id='item5' carrousel-target='5'>TESTE</div>
-    <div class='carrousel-item' id='item6' carrousel-target='6'>TESTE</div>
-  </div>
+  <!-- <div class='carrousel'>
+    <div class='carrousel-item bg-light'>TESTE</div>
+    <div class='carrousel-item bg-light'>TESTE</div>
+    <div class='carrousel-item bg-light'>TESTE</div>
+  </div> -->
 </main>
 
 <script>
