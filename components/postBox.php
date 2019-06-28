@@ -46,7 +46,7 @@
   <div class="panel-body">
     <section class="post-heading">
       <div class="row">
-        <div class="col-md-11">
+        <div class="col-md-12">
           <div class="media">
             <div class="media-left">
               <a href="#">
