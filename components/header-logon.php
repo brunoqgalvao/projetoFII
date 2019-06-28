@@ -8,15 +8,14 @@
     <span class="logo-container-title">projeto fii</span>
   </div>
   <form action="" class='search-box'>
-    <input type="search" name="" class="input-search" placeholder="faça uma busca por fundo de investimento">
+    <input type="search" name="" class="input-search" placeholder="Busque fundos de investimento...">
     <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
   </form>
 
-  <div class= 'header-perfil-container'>
+  <div class= 'header-perfil-container my-2'>
   <a href="#" id="perfil-link"></a>
     <div class="avatar-container">
       <img src="assets/itau.jpg" alt="avatar" class="avatar-img">
     </div>
-    <span class="text-white">Itaú</span>
   </div>
 </header>
