@@ -1,36 +1,22 @@
-<header id="cabecalho">
+<!--  -->
+<!-- FIXME: Mobile não está resolvido no header - vai ser CSS? -->
 
-  <!-- parte 1/3 - logo -->
-  <div id="logo_container">
-    <a href="#" id="home"></a>
-    <div id="logo_bg"></div>
-    <span id="nome_logo">projeto fii</span>
+<header>
+  <div class= 'logo-container'>
+    <a href="./index.php" class="logo-container-link"></a>
+    <div class="logo-container-logo-bg"></div>
+    <span class="logo-container-title">projeto fii</span>
   </div>
-
-  <!-- parte 2/3 - form -->
-  <form action="" id="form">
-    <input type="search" name="" id="form-input-search" placeholder="faça uma busca por fundo de investimento">
-    <button id="form_button" type="submit"><i class="fas fa-search"></i></button>
+  <form action="" class='search-box'>
+    <input type="search" name="" class="input-search" placeholder="faça uma busca por fundo de investimento">
+    <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
   </form>
 
-  <!-- parte 3/3 - avatar -->
-  <div id="avatar_header_container">
-    <a href="#" id="perfil-link"></a>
-
-    <div class="all_avatar_container" id="avatar_header">
-      <img src="assets/avatar.jpg" alt="avatar" class="all_avatar_img">
+  <div class= 'header-perfil-container'>
+  <a href="#" id="perfil-link"></a>
+    <div class="avatar-container">
+      <img src="assets/itau.jpg" alt="avatar" class="avatar-img">
     </div>
-
-    <span id="nome_usuario_header">larissa</span>
+    <span class="text-white">Itaú</span>
   </div>
-  <nav class="nav-menu_perfil nav-menu_perfil_open">
-    <ul id="nav-lista_menu_perfil">
-      <li class="item-lista_menu_perfil">
-        <a href="http://" target="_blank" rel="noopener noreferrer">meu perfil</a>
-      </li>
-      <li class="item-lista_menu_perfil"><a href="http://" target="_blank" rel="noopener noreferrer">dashboard</a></li>
-      <li class="item-lista_menu_perfil"><a href="http://" target="_blank" rel="noopener noreferrer">suporte</a></li>
-      <li class="item-lista_menu_perfil"><a href="http://" target="_blank" rel="noopener noreferrer">log out</a></li>
-    </ul>
-  </nav>
 </header>
