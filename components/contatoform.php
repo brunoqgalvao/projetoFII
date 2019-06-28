@@ -1,15 +1,11 @@
 <!-- This is the contato form -->
 <!-- TODO:
-<<<<<<< HEAD
-  - Linkar form
-=======
   - fazer form passando por varios steps via javascript
->>>>>>> 019add0ca151ffd07fac77de0dc639f6269aa850
 -->
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-10 col-md-5">
-      <fieldset class=" mt-5">
+      <fieldset class=" mt-auto">
         <div class="text-center">
         <legend>CONTATE-NOS</legend>
         </div>
@@ -24,14 +20,12 @@
             <textarea name="comentario" class ="form-control" cols="8" rows="10" placeholder="Comentários e sugestões"></textarea>
           </div>
           <div class="form-group">
-            <div class="justify-content-between">
-              <div class="form-inline">
-                <div class="form-check ml-0 w-auto">
-                  <input type="checkbox" class="form-check-input" id="postarNome">
-                  <label class="form-check-label" for="postarNome">Não postar meu nome</label>
-                </div>
-                  <button type="submit" class="btn btn-primary">Submit</button> 
+            <div class="form-inline justify-content-between pb-3">
+              <div class="form-check ml-0 w-auto">
+                <input type="checkbox" class="form-check-input" id="postarNome">
+                <label class="form-check-label" for="postarNome">Não postar meu nome</label>
               </div>
+                <button type="submit" class="btn btn-primary">Submit</button> 
             </div>
           </div>
         </form>  
