@@ -3,16 +3,14 @@
     <!-- img de fundo -->
     <div class='bg' style="background-image:url('assets/itau_banner.jpg')"></div>
     <!-- foto e perfil e nome -->
-    <div class="col-md-2 d-flex flex-column-reverse">
-      <div class='header-perfil-container' style="height:200px;width:200px">
-        <a href="#" id="perfil-link"></a>
-        <div class="avatar-container">
-          <img src="assets/itau.jpg" alt="avatar" class="avatar-img">
+    <div class="col-md-6 d-flex flex-column-reverse">
+      <div class='row d-flex align-items-end'>
+        <div class='header-perfil-container' style="height:200px;width:200px">
+          <a href="#" id="perfil-link"></a>
+          <div class="avatar-container">
+            <img src="assets/itau.jpg" alt="avatar" class="avatar-img">
+          </div>
         </div>
-      </div>
-    </div>
-    <div class='col-md-2  d-flex flex-column-reverse'>
-      <div class='all-center' style="height:100px;margin-bottom:0;">
         <h3 class='text-white'>Banco Itaú</h3>
       </div>
     </div>

@@ -25,7 +25,7 @@
   }
 
   .photo-profile {
-    border: 1px solid var(--verde);
+    border:none;
   }
 
   .anchor-username h4 {
@@ -51,15 +51,14 @@
             <div class="media-left">
               <a href="#">
                 <img class="media-object photo-profile"
-                  src="http://0.gravatar.com/avatar/38d618563e55e6082adf4c8f8c13f3e4?s=40&d=mm&r=g" width="40"
+                  src="./assets/itau.jpg" width="40"
                   height="40" alt="...">
               </a>
             </div>
-            <div class="media-body">
+            <div class="media-body ml-2 align-items-end">
               <a href="#" class="anchor-username">
                 <h4 class="media-heading">Bayu Darmantra</h4>
               </a>
-              <a href="#" class="anchor-time">51 mins</a>
             </div>
           </div>
         </div>
