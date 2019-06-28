@@ -11,11 +11,11 @@
     </div>
     <div class= 'header-login-btns'>
       <div class="mb-2">
-      <button type="button" class="btn btn-padrao" data-toggle="modal" data-target="#modalCadastrar">
+      <button type="button" class="btn btn-padrao btn-small" data-toggle="modal" data-target="#modalCadastrar">
         CADASTRAR
       </button>      
     </div>
-      <button type="button" class="btn btn-login" data-toggle="modal" data-target="#modalLogin">
+      <button type="button" class="btn btn-login btn-small" data-toggle="modal" data-target="#modalLogin">
         ENTRAR
       </button>
       <?php include('components/modalLogin.php');?>

@@ -4,7 +4,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-body login-form">
-        <div class='login-form-title'>CADASTRE-SE PROJETO FII</div>
+        <div class='login-form-title'>BEM VINDO AO PROJETO FII</div>
         <hr />
         <div class='btn-login-facebook text-center'>
           <a class="btn btn-lg btn-facebook" href="./">
