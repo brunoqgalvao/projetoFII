@@ -38,7 +38,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 p-sm-0 p-3">
+      <div class="col-md-6 p-sm-0 p-md-3">
         <?php include('postBox.php')?>
       </div>
     </div>
