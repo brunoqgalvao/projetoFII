@@ -100,12 +100,6 @@
                   height="32" alt="...">
               </a>
             </div>
-            <div class="media-body">
-              <a href="#" class="anchor-username">
-                <h4 class="media-heading">Media heading</h4>
-              </a>
-              <a href="#" class="anchor-time">51 mins</a>
-            </div>
           </div>
         </div>
       </div>
