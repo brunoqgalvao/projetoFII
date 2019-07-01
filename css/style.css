@@ -84,13 +84,16 @@ body{
   border-radius: var(--border-radius-input);
 }
 
+.font-small {
+  font-size:0.3em;
+}
+
 .bg-container{
   position:relative;
 }
 
 .bg {
   position:absolute;
-  z-index:-1;
   height:100%;
   width:100%;
   background-position: center;
@@ -98,6 +101,8 @@ body{
   background-size:cover;
   opacity:0.8;
 }
+
+
 
 /* CSS DO HEADER */
 
