@@ -40,6 +40,9 @@
       </div>
       <div class="col-md-6 p-sm-0 p-md-3">
         <?php include('postBox.php')?>
+        <?php include('postBox.php')?>
+        <?php include('postBox.php')?>
+
       </div>
     </div>
 </section>
