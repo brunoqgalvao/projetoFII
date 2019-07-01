@@ -49,22 +49,54 @@ a:hover {
   text-decoration: inherit;
 }
 
+/* Center All */
+.all-center {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 /* PADRAO GLOBAL */
 
 body{
-  overflow-x: hidden;
   font-family: 'Titillium Web', sans-serif;
+  overflow-x:hidden;
+
+}
+.min-screen-size{
+  overflow-x: hidden;
   display:flex;
   flex-flow:column nowrap;
   justify-content:space-between;
-  width: 100vw;
-  min-height:calc(100vh);
+  min-height:calc(80vh);
+}
+.btn-small{
+  padding:0.1rem 0.5rem;
 }
 
 .btn-padrao {
   background-color: #158891;
   color:white;
   border-radius: var(--border-radius-input);
+}
+
+.bg-container{
+  position:relative;
+}
+
+.bg {
+  position:absolute;
+  z-index:-1;
+  height:100%;
+  width:100%;
+  background-position: center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:0.8;
 }
 
 /* CSS DO HEADER */
@@ -95,7 +127,7 @@ header > .logo-container > a.logo-container-link { /* */
 }
 header  > .logo-container > .logo-container-logo-bg {
   display: block;
-  height: 1.5cm;
+  height: 1cm;
   background: url(../assets/logo.png) no-repeat left;
   background-size: contain;
 }
@@ -144,7 +176,7 @@ header > .search-box {
   opacity: 0.85;
   font-weight: bold;
 }
-.search-box > button.search-btn {
+button.search-btn{
   background: var(--verde);
   cursor: pointer;
   border: none;
@@ -158,10 +190,10 @@ header > .search-box {
   outline: none;
   transition: 300ms ease;
 }
-.search-box > button.search-btn:hover{
-  background: var(--verde-hover);
+button.search-btn:hover{
+  background:var(--verde-hover);
 }
-.search-box > button.search-btn:active{
+button.search-btn:active{
   color: var(--verde);
 }
 header > .header-login-btns {
@@ -179,6 +211,34 @@ header > .header-login-btns > .btn {
 header > .header-login-btns > .btn.btn-login {
   background-color: var(--background-color-main);
   color:var(--verde);
+}
+
+.header-perfil-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 60px;
+  width:60px;
+  height:60px;
+}
+/* perfil */
+.avatar-container{
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-avatar);
+}
+.avatar-container > .avatar-img{
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-container > .avatar-nome-usuario {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  color: #ffffff;
 }
 
 @media(min-width:576px){
@@ -234,36 +294,33 @@ color: white;
 }
 
 /* LOGIN FORM CSS */
-.login-container {
-  min-height: var(--body-height);
-}
-.login-container > .row > .login-form {
+.login-form {
   padding: 5%;
   /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19); */
 
 }
-.login-container > .row > .login-form  .login-form-title {
+.login-form  .login-form-title {
   font-size:1.2rem;
   font-weight:bold;
   text-align: center;
   color: #333;
 }
-.login-container > .row > .login-form > form {
+.login-form > form {
   padding: 0% 10% 0% 10% ;
 }
-.login-container > .row > .login-form .btn-submit {
+.login-form .btn-submit {
   width: 50%;
   border-radius: 1rem;
-  padding: 1.5%;
+  padding: 0.5em;
   border: none;
   cursor: pointer;
 }
-.login-container > .row > .login-form .btn-submit {
+.login-form .btn-submit {
   font-weight: 600;
   color: #fff;
   background-color: var(--verde);
 }
-.login-container > .row > .login-form #login-forget-pwd {
+.login-form #login-forget-pwd {
   color: var(--verde);
   font-weight: 600;
   text-decoration: none;
